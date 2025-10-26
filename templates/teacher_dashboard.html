@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher Dashboard - GradeTrack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      background-color:  #afdde5;
+    }
+   .sidebar {
+  background-color: #133136; /* Darker, modern grey */
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+  position:inherit;
+}
+    .result-section {
+      padding: 2rem;
+    }
+    .user-info-box {
+      background-color: #4b828b; /* A slightly lighter shade than the sidebar */
+      border-radius: 8px; /* Rounded corners */
+      padding: 10px; /* Internal spacing */
+      margin-bottom: 20px; /* Space below the box */
+      border: 1px solid #778899; /* Subtle border */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+    .user-info-box p {
+        margin-bottom: 5px; /* Less space between lines */
+        font-size: 0.95rem; /* Slightly smaller font */
+    }
+    .user-info-box strong {
+        font-weight: 600; /* Make labels stand out */
+    }
+    .btn-custom-blue {
+  color: white;
+  background-color: #46979c;
+  border-color: #46979c;
+}
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 sidebar d-flex flex-column">
+        <h5>GradeTrack</h5>
+        <hr style="border-color: white" />
+        <p style="font-size: 30px;"><strong>Hello, {{ name }}</strong></p>
+        <div class="user-info-box">
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Role:</strong>{{ role  | capitalize }}</p>
+        
+      </div><hr style="border-color: white" />
+         <button onclick="showUploadData()" class="btn btn-custom-blue w-100 mb-2">Upload Data</button>
+         <button onclick="showClassPerformance()" class="btn btn-custom-blue w-100 mb-2">Class Performance</button>
+         <button onclick="showStudentPerformanceLookup()" class="btn btn-custom-blue w-100 mb-2">Student Performance Lookup</button>
+        <!-- <button onclick="showAllPredictions()">View All Predictions</button>-->
+        </nav>
+
+      <!-- Result section -->
+      <main class="col-md-9 result-section" id="teacher-content">
+        
+        
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GradeTrack Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="min-vh-100 d-flex flex-column">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GradeTrack</a>
+            <div class="d-flex">
+                <a href="/login" class="btn btn-outline-light me-2">Login</a>
+                <a href="/register" class="btn btn-light">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="display-4">GradeTrack </h1>
+            <p class="para">Student Performance Analysis System</p>
+        </div>
+    </header>
+
+    <!-- Footer Section -->
+    <footer >
+        <div class="container">
+            <a href="https://twitter.com" target="_blank" class="text-white me-3">Twitter</a>
+            <a href="https://instagram.com" target="_blank" class="text-white">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Popper and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
